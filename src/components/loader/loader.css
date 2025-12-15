@@ -1,0 +1,71 @@
+/* COMMON */
+.letter-loader span,
+.stretch-loader span,
+.glow-loader {
+  font-family: 'Arial Black', sans-serif;
+  font-size: 3rem;
+  color: #e50914;
+}
+
+/* LETTER BY LETTER */
+.letter-loader span {
+  opacity: 0;
+  animation: letterReveal 1.8s forwards;
+}
+
+@keyframes letterReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 20px rgba(229, 9, 20, 0.8);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* NETFLIX STRETCH INTRO */
+.stretch-loader span {
+  display: inline-block;
+  transform-origin: bottom;
+  animation: stretch 1.6s forwards;
+}
+
+@keyframes stretch {
+  0% {
+    transform: scaleY(0.05);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleY(1.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+/* GLOW REVEAL */
+.glow-loader {
+  opacity: 0;
+  animation: glowPulse 2s forwards;
+}
+
+@keyframes glowPulse {
+  0% {
+    opacity: 0;
+    text-shadow: none;
+  }
+  70% {
+    opacity: 1;
+    text-shadow: 0 0 40px rgba(229, 9, 20, 1);
+  }
+  100% {
+    opacity: 1;
+  }
+}
